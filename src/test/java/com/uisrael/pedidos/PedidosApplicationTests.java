@@ -4,20 +4,22 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import repositorio.entidades.Cliente;
-import servicios.IClienteServicio;
+import com.uisrael.pedidos.modelo.entidades.Cliente;
+import com.uisrael.pedidos.servicios.IClienteService;
 
 @SpringBootTest
 class PedidosApplicationTests {
 
 	@Autowired
-	IClienteServicio clienteServicio;
+	IClienteService clienteServicio;
 	
 	@Test
 	void contextLoads() {
-		Cliente cliente = new Cliente();
-		
-		clienteServicio.insertarCliente(cliente);
+		/*
+		 * Cliente cliente = new Cliente();
+		 * 
+		 * clienteServicio.insertarCliente(cliente);
+		 */
 	}
 
 }

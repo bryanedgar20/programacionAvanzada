@@ -1,4 +1,4 @@
-package servicios.impl;
+package com.uisrael.pedidos.servicios.impl;
 
 import java.util.List;
 
@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import modelo.repositorio.IClienteRepositorio;
-import repositorio.entidades.Cliente;
-import servicios.IClienteServicio;
+import com.uisrael.pedidos.modelo.entidades.Cliente;
+import com.uisrael.pedidos.modelo.repositorio.IClienteRepositorio;
+import com.uisrael.pedidos.servicios.IClienteService;
 
 @Service
 @Component
-public class ClienteServicioImpl implements IClienteServicio{
+public class ClienteServicioImpl implements IClienteService{
 
 	@Autowired
 	@Lazy
