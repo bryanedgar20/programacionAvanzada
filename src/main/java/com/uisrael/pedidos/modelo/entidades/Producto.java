@@ -50,4 +50,8 @@ public class Producto implements Serializable{
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idDetPedido")
 	private DetPedido detallePedido;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idTipoProducto")
+	private TipoProducto tipoProducto;
 }

@@ -2,12 +2,15 @@ package com.uisrael.pedidos.modelo.entidades;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
@@ -40,4 +43,7 @@ public class TipoProducto implements Serializable{
 	
 	@Column(name = "fechaModificacion")
 	private Date fechaModificacion;
+	
+	@OneToMany(fetch = FetchType.LAZY,mappedBy = "tipoProducto")
+	private List<Producto> listaProducto;
 }
