@@ -28,7 +28,7 @@ public class ClienteServicioImpl implements IClienteService{
 	@Override
 	public List<Cliente> listarCliente() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.clienteRepositorio.findAll();
 	}
 
 }
