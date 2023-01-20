@@ -882,7 +882,9 @@
       <td th:text="${cliente.nombreCliente}"></td>
       <td th:text="${cliente.apellidoCliente}"></td>
       <td th:text="${cliente.estado}"></td>
-      <td></td>
+      <td><a href="#" class="btn btn-outline-info btn-sm"><i class="fa fa-edit"></i></a>
+      <a onclick="return confirm('Seguro que desea eliminar el registro?')" 
+      href="#" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></a></td>
     </tr>
   </tbody>
 </table>
@@ -918,6 +920,31 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+
+
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+<script>
+    $('#exampleModal2').on('show.bs.modal', function () {
+        var name = prompt("Please enter your name", "John Doe");
+        $.get("/modals/modal2?name=" + name, function (data) {
+            $('#exampleModal2').find('.modal-body').html(data);
+        })
+    })
+</script>
+
+
+
+
+
+
+
+
+
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
