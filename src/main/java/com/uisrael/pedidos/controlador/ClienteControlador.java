@@ -26,4 +26,13 @@ public class ClienteControlador {
 		
 		return "cliente/cliente";
 	}
+	
+	
+	@GetMapping("/test")
+	public String test() {
+		
+		
+		return "cliente/plantilla";
+	}
+	
 }
